@@ -103,16 +103,7 @@ export const updateProfile = async (req, res) => {
   }
 };
 
-export const deleteUser = async (req, res) => {
-  try {
-    const userId = req.params.id;
-    const user = await User.findByIdAndDelete(userId);
-    if (!user) {
-      res.status(404).json({ message: "User not found for deleting account" });
-    }
-    res.status(200).json({ message: "User deleted successfully" });
-  } catch (error) {}
-};
+
 
 export const checkAuth = async (req, res) => {
   res.status(200).json(req.user);
