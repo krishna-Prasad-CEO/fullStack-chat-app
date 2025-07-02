@@ -23,7 +23,7 @@ const ChatContainer = () => {
     subscribeToMessages();
 
     return () => {
-      unsubscribeFromMessages;
+      unsubscribeFromMessages();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
